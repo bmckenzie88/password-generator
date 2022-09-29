@@ -81,36 +81,20 @@ function generatePassword() {
 
   // build password character by character
   // generate random Int within range of available char length
-  var randomInt = Math.floor(Math.random() * optionsPool.length);
-  console.log(randomInt);
   // add char to result
-  var result = optionsPool[randomInt];
-
+//   var result = optionsPool[randomInt];
+  
   // repeat until decided length is met
-  for (i = 0; i < length; i++) {
-    result += optionsPool[randomInt];
-  }
-  return result;
+  for (i = 0; i < lengthChoice; i++) {
+      var randomInt = Math.floor(Math.random() * optionsPool.length);
+      console.log(randomInt);
+      result += optionsPool[randomInt];
+}
+return result;
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// alert("hello!")
-// var isHappy = confirm("are you happy?")
-// console.log(isHappy)
-// var faveColor = prompt("what is your favorite color?");
-// console.log(faveColor);
 
-// random=(math.floor(Math.random()*100) +1)
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-// alert("hello!")
-// var isHappy = confirm("are you happy?")
-// console.log(isHappy)
-// var faveColor = prompt("what is your favorite color?");
-// console.log(faveColor);
-
-// random=(math.floor(Math.random()*100) +1)
